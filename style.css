@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
-  --colour-one: #59a28a;
-  --colour-two: #f5f5f5;
-  --colour-three: #333333;
+  --color-one: #2e7d84;
+  --color-two: #f5f5f5;
+  --color-three: #333333;
   --font-one: "Poppins", sans-serif;
   --font-two: "Dancing Script", cursive;
+  --font-three: "Pacifico", cursive;
 }
 
 * {
@@ -15,139 +17,132 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--colour-two);
   font-family: var(--font-one);
   font-size: 1rem;
+  color: var(--color-three);
+  background-color: var(--color-two);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .stylized-font {
-  font-family: var(--font-two);
+  font-family: var(--font-three);
 }
 
-.nav-link {
-  text-decoration: none;
-  color: var(--colour-three);
+.home-font-lg {
+  color: var(--color-one);
+  font-size: 2.5rem;
+}
+.home-font-sm {
+  color: var(--color-one);
+  font-size: 1rem;
 }
 
-.nav-link:hover {
-  color: var(--colour-one);
+.home-font-rotate {
+  transform: rotate(-10deg);
 }
 
-nav {
+.home-font-trans-right {
+  transform: translate(30px);
+}
+
+.nav-container {
   width: 100%;
-  height: 80px;
+  height: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  font-size: 0.9rem;
-  background-color: var(--colour-two);
+  background-color: var(--color-two);
 }
 
 .nav-items {
-  width: 80%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-section {
-  width: 100vw;
+.nav-link {
+  text-decoration: none;
+  color: var(--color-three);
+  font-size: 0.8rem;
 }
 
-.section-content-center {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.nav-link:hover {
+  color: var(--color-one);
 }
 
-.section-content-flexible {
-  width: 100vw;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.section-content-container {
+.main-container {
   width: 90%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: auto;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.container-padding-top {
-  padding-top: 60px;
-}
-
-.section-content-item {
+.section-container {
   width: 100%;
   height: auto;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+}
+
+.section-item {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: left;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
   padding: 20px;
+  font-size: 0.8rem;
+  color: var(--color-two);
+  background-color: #999;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.section-content-container-flex-dir {
-  flex-direction: column;
-}
-
-.home-text-sm {
-  font-size: 1.1rem;
-}
-
-.home-text-lg {
-  font-size: 5.5rem;
-}
-
-/* Above 800px width*/
-@media screen and (min-width: 800px) {
-  .nav-items {
-    width: 30%;
+/* Screen size larger than 350px */
+@media only screen and (min-width: 350px) {
+  .nav-link {
+    font-size: 0.95rem;
   }
 
-  .home-text-sm {
-    font-size: 1.5rem;
+  .home-font-size-lg {
+    font-size: 2.8rem;
+  }
+  .home-font-size-sm {
+    font-size: 1.3rem;
+  }
+}
+
+/* Screen size larger than 500px */
+@media only screen and (min-width: 500px) {
+  .main-container {
+    width: 80%;
   }
 
-  .home-text-lg {
-    font-size: 6rem;
-  }
-
-  .section-content-container-flex-dir {
+  .section-container {
     flex-direction: row;
   }
-}
 
-/* Below 400px width */
-@media screen and (max-width: 350px) {
-  body {
-    font-size: 0.8rem;
+  .home-font-size-lg {
+    font-size: 3.5rem;
+  }
+  .home-font-size-sm {
+    font-size: 1.8rem;
+  }
+
+  .footer {
+    font-size: 1rem;
   }
 }
