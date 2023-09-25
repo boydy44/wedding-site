@@ -1,3 +1,14 @@
+// Pop up menu
+
+let openMenuButton = document.querySelector("#openMenuButton");
+let popUpMenu = document.querySelector("#popUpMenu");
+
+openMenuButton.addEventListener("click", openMenu);
+
+function openMenu() {
+  popUpMenu.classList.add("pop-up-menu-container-open");
+}
+
 // Calculate number of days until wedding
 let weddingDate = new Date("04/10/2025");
 let todayDate = new Date();
