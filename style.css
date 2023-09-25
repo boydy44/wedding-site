@@ -31,6 +31,10 @@ img {
   height: auto;
 }
 
+h2 {
+  color: var(--color-one);
+}
+
 #daysCounter {
   font-size: 1.4rem;
   color: #2e7d84;
@@ -46,7 +50,7 @@ img {
 }
 
 .p-margin-top {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .home-font-lg {
@@ -96,7 +100,17 @@ img {
 
 .open-menu-button {
   display: block;
-  color: var(--color-three);
+  color: var(--color-one);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.close-menu-button {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--color-four);
   font-size: 1.3rem;
   cursor: pointer;
 }
@@ -207,7 +221,6 @@ img {
   .nav-link {
     font-size: 1rem;
     color: var(--color-three);
-    font-size: 0.7rem;
   }
 
   .nav-link:hover {
