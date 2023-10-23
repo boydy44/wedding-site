@@ -45,6 +45,44 @@ h2 {
   color: var(--color-one);
 }
 
+.login-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#password {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  font-size: 0.8rem;
+  box-shadow: none;
+}
+
+#password:focus {
+  border: 2px solid var(--color-one);
+  outline: none;
+}
+
+.incorrect-password {
+  border: 2px solid red;
+}
+
+.btn-login {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-two);
+  background-color: var(--color-one);
+  cursor: pointer;
+}
+
 #daysCounter {
   font-size: 1.4rem;
   color: #2e7d84;

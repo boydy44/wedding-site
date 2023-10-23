@@ -1,5 +1,24 @@
-// Pop up menu
+//Handle login
+let passwordText = document.querySelector("#password");
+let loginButton = document.querySelector("#login");
+let data;
 
+loginButton.addEventListener("click", login);
+
+function login() {
+  fetch("./data.json")
+    .then((response) => response.json())
+    .then((json) => (data = json));
+
+  if (passwordText.value == data.pass) {
+    passwordText.classList.remove("incorrect-password");
+    window.location.href = data.redirect;
+  } else {
+    passwordText.classList.add("incorrect-password");
+  }
+}
+
+// Pop up menu
 let openMenuButton = document.querySelector("#openMenuButton");
 let closeMenuButton = document.querySelector("#closeMenuButton");
 let popUpMenu = document.querySelector("#popUpMenu");
