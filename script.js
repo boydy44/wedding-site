@@ -2,9 +2,6 @@
 window.addEventListener("unhandledrejection", (event) => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 });
-fetch("./data.json")
-  .then((response) => response.json())
-  .then((json) => (data = json));
 
 let passwordText = document.querySelector("#password");
 let loginButton = document.querySelector("#login");
@@ -18,6 +15,10 @@ if (loginButton !== null) {
       loginButton.click();
     }
   });
+
+  fetch("./data.json")
+    .then((response) => response.json())
+    .then((json) => (data = json));
 }
 
 function login() {
