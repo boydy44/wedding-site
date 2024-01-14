@@ -35,6 +35,7 @@ a {
 .hero-image {
   max-width: min(100%, 600px);
   height: auto;
+  box-shadow: 5px 5px 0px 0px var(--color-four);
 }
 
 h2 {
