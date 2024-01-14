@@ -32,8 +32,8 @@ a {
   font-size: 1rem;
 }
 
-img {
-  width: 100%;
+.hero-image {
+  max-width: min(100%, 600px);
   height: auto;
 }
 
